@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+</header>
+
+<body>
+<style>
+    #bg1 {
+        background: {{ color1 }}
+    }
+    #bg2 {
+        background: linear-gradient(to bottom, {{ color2 }})
+    }
+    #bg3 {
+        background: linear-gradient(to bottom, {{ color3 }})
+    }
+
+#bg1 {
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    pointer-events: none;;
+    z-index: -1;
+    top: 0;
+}
+#bg2 {
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    top: 0;
+}
+#bg3 {
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    top: 0;
+}
+
+.pad {
+    padding-left: 71px;
+}
+</style>
+<div id="bg1"></div>
+<div id="bg2"></div>
+<div id="bg3"></div>
+{% block content %}{% endblock %}
+</body>
+</html>
